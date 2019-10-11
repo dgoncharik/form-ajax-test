@@ -1,0 +1,23 @@
+.btn {
+  padding: 15px 24px;
+  background: $btn-bg-color;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+  transition: background-color 200ms;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($btn-bg-color, 10%);
+  }
+
+  &:active {
+    background-color: lighten($btn-bg-color, 30%);
+  }
+}

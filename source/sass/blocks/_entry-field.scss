@@ -1,0 +1,47 @@
+.entry-field {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+  
+  &__label {
+    font: inherit;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    font: inherit;
+    padding: 15px;
+    border: 1px solid $entry-field-border-color;
+    border-radius: 5px;
+    transition: border-color 200ms;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: darken($entry-field-border-color, 40%);
+    }
+  }
+
+  &--error {
+    .entry-field__input {
+      border-color: #EE1C1C;
+    }
+
+    &::after {
+      content: "Заполните поле";
+      position: absolute;
+      bottom: 9px;
+      font-size: 12px;
+      line-height: 14px;
+      color: #F03838;
+    } 
+  }
+} 

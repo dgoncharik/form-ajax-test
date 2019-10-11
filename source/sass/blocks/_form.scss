@@ -1,0 +1,30 @@
+.form {
+  width: 773px;
+  padding: 30px;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+  text-align: center;
+
+  &__user-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  &__user-name-item {
+    width: 347px;
+  }
+}
+
+@media (max-width: 773px) {
+  .form {
+    width: 100%;
+    
+    &__user-name-wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__user-name-item {
+      width: 100%;
+    }
+  }
+}
