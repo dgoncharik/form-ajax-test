@@ -34,8 +34,8 @@
           invalidElements.push(elem);
           this._addMistake(elem);
         }
-        invalidElements.length > 0 ? valid = false : valid = true;
       });
+      invalidElements.length > 0 ? valid = false : valid = true;
       return {status: valid, invalid: invalidElements};
     }
 
