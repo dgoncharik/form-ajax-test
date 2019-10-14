@@ -27,14 +27,14 @@
     }
 
     _validateForm() {
-      let valid = true;
+      let valid;
       const invalidElements = [];
       this._elements.forEach((elem) => {
         if (!this._validateElement(elem)) {
-          valid = false;
           invalidElements.push(elem);
           this._addMistake(elem);
         }
+        invalidElements.length > 0 ? valid = false : valid = true;
       });
       return {status: valid, invalid: invalidElements};
     }
@@ -63,6 +63,10 @@
 
     getFormData() {
       return new FormData(this._formElement);
+    }
+
+    getAction() {
+      return this._formElement.getAttribute("action");
     }
 
     reset() {
